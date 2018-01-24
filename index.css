@@ -1,0 +1,112 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Libre Baskerville', serif;
+}
+
+body {
+  font-size: 1.5em;
+}
+
+.titleSection {
+  background-color: #7FDBFF;
+  border-radius: 5em;
+  margin-top: 20px;
+}
+
+h1 {
+	color: black;
+	margin-top: 20px;
+	border-radius: 5em;
+	background-color: white;
+	text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.row {
+  text-align: center;
+}
+
+button {
+  font-size: 1.1em;
+	border:		3px outset;
+	border-radius: 5%;
+	font-weight:		bold;
+}
+
+input[type="button"]{
+	border:		3px #a3ceda outset;
+	border-radius: 10%;
+	font-weight:		bold;
+	padding:	5px 10px;
+}
+
+.questionChoicesContainer {
+  border: white;
+}
+
+.questionContainer, .choicesContainer {
+  text-align: left;
+}
+
+.choicesContainer {
+  padding-left: 60px;
+}
+
+.jsMethods {
+  padding-left: 10px;
+  font-family: 'Courier';
+}
+
+.labelContainer {
+  border: 3px gray outset;
+  border-radius: 1.5em;
+  box-shadow:rgba(0,0,0,0.4)5px 5px;
+}
+
+.choicesContainer label {
+  display: block;
+  padding: 5px;
+}
+
+.info {
+  color: red;
+  text-align: center;
+  font-size: 1.5em;
+  margin-top:20px;
+}
+
+input[type='radio'] {
+  transform: scale(1.8);
+  margin-left: 10px;
+  padding-left:10px;
+  vertical-align: middle;
+  border: 2px solid black;
+  background-color: white;
+}
+
+.navigationContainer label{
+  margin-top: 5px;
+  font-size: 0.8em;
+  padding-left: 0;
+}
+
+.resultSection {
+  padding-top: 20px;
+}
+
+.retakeButton {
+  margin-top: 30px;
+}
+
+.focused {
+  background-color: white;
+  background-color: rgba(0, 240, 255, 0.4);
+  box-shadow: 0 0 1px 2px rgba(0, 240, 255, 0.4);
+}
+
+a {
+  text-align: left;
+}

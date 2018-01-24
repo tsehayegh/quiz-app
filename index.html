@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang ="en">
+  <head>
+    <!--meta -->
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1, shrink-to-fit = no">
+    <!--title -->
+    <title>JavaScript Array Methods Quiz</title>
+    <!--link html and css -->
+    <link rel="stylesheet" href = "responsive-design.css">
+    <link rel="stylesheet" href = "index.css">
+    <!--Google fonts (webfonts)-->
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+   <!--Font Awesome icons-->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class = "titleSection row" rol ="header">
+        <h1>JavaScript Array Methods Quiz</h1>
+    </header>
+    <section class = "startSection row" role = "contentinfo">   
+      <p class = "quizInfo">In this quiz, you will be provided with a definition of a JavaScript method and you will choose the method that matches to the definition.</p>
+      <p class = "appCompatibility">(The app does not work in Internet Explorer 11.)</p>
+      <p>Are you ready to take the quiz? Click the <em>Begin</em> button to start!</p>
+      <button class = "beginButton" type = "submit">Begin</button> 
+    </section>
+    <form class = "quizSection hidden" role = "main" action = "" method = "post" >
+      <fieldset class = "questionChoicesContainer">
+        <legend class = "questionContainer row">
+          <p class ="question">Update me with questions</p>
+        </legend>
+        <div class ="choicesContainer row">
+        </div>
+        <nav class ="navigationContainer row" role = "navigation">
+            <label class = "col-3 status">Question: <span class = spann-status>1</span> out of 10</label>
+            <label class = "col-3 score">Score: <span class = spann-score>0 correct, 0 incorrect</span></label>
+            <div class = "col-3 submitAnswer">
+              <button class = "submitButton">Submit</button>
+            </div>
+            <div class = "col-3 nextQuestion">
+              <button class = "nextButton" disabled>Next &raquo;</button>
+            </div>
+        </nav>
+        <p class = "info" role = "note" aria-live = "assertive" hidden></p>
+      </fieldset>
+    </form>
+    <section class = "resultSection row hidden" role = "result">
+      <h2 class ="col-12 quizResult">Result</h2>
+    </section>
+    <!-- jQuery library --> 
+    <script src = "https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script type = "text/javascript" src="index.js"></script>
+  </body>
+</html>
