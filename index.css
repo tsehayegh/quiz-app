@@ -14,11 +14,11 @@ body {
 }
 
 h1 {
-	color: black;
-	margin-top: 20px;
-	border-radius: 5em;
-	background-color: white;
-	text-align: center;
+  color: black;
+  margin-top: 20px;
+  border-radius: 5em;
+  background-color: white;
+  text-align: center;
 }
 
 .hidden {
@@ -31,20 +31,25 @@ h1 {
 
 button {
   font-size: 1.1em;
-	border:		3px outset;
-	border-radius: 5%;
-	font-weight:		bold;
+  border:   3px outset;
+  border-radius: 5%;
+  font-weight:    bold;
 }
 
 input[type="button"]{
-	border:		3px #a3ceda outset;
-	border-radius: 10%;
-	font-weight:		bold;
-	padding:	5px 10px;
+  border:   3px #a3ceda outset;
+  border-radius: 10%;
+  font-weight:    bold;
+  padding:  5px 10px;
 }
 
-.questionChoicesContainer {
+fieldset {
   border: white;
+
+}
+
+.methods-to-choose {
+   text-align: left; 
 }
 
 .questionContainer, .choicesContainer {
@@ -107,6 +112,3 @@ input[type='radio'] {
   box-shadow: 0 0 1px 2px rgba(0, 240, 255, 0.4);
 }
 
-a {
-  text-align: left;
-}
