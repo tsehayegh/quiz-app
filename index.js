@@ -69,13 +69,10 @@ function renderQuestionChoices(selectedIndex, choiceIndices) {
   $('.question').html(`${methods[selectedIndex].definition}`);
   $('.choicesContainer').empty();
   choiceIndices.map(function(ind){
-    $('.choicesContainer').append(`<label class="labelContainer cont-${ind}" aria-controls = "method-choice">
-        <input type = "radio" name ="choice" 
-              value = ${methods[ind].method} 
-              id = ${methods[ind].method}>
-        <code class ="jsMethods">${methods[ind].method}</code>
-        <div role = "region" id = "method-choice" aria-live = "plotie"></div>
-        </label><br>`);   
+    $('.choicesContainer').append(`<label class = "labelContainer cont-${ind}">
+                                  <input type = "radio" name ="choice" 
+                                          value = ${methods[ind].method}>
+                                  <code class ="jsMethods">${methods[ind].method}</code></label><br>`);   
   });
 }
 
@@ -84,7 +81,6 @@ function checkIfOptionsSelected(){
   $('.choicesContainer').on('click','input',function(event){
      $('.submitButton').attr('disabled',false);
      $('.info').html('');
-     $('.info').attr('hidden', true);
   });
 }
 $(checkIfOptionsSelected);
@@ -118,18 +114,16 @@ function determineSelectedChoice(){
   let selectedIndex = findIndexByKeyValue(methods, "method", selectedOption);
   let indexCounter = countCorrectAnswersAttemptedQuestions(methods, 'status');
   let correctAnswer = methods[indexCounter].method;
-  $('.info').attr('hidden', false);
   if(selectedIndex !== null ) {
     $('.submitButton').attr('disabled',true);
     $('.nextButton').attr("disabled", false);
     $('.labelContaner label, .labelContainer input').attr('disabled',true);
     if (selectedOption === correctAnswer){
       methods[indexCounter].correct = true;
-
       $('.info').html("Good job! You got that right!");
       $('.info').css("color","blue");
     } else {
-      $('.info').html(`Sorry, the correct answer was <em>${correctAnswer}</em>`);
+      $('.info').html(`Sorry, the correct answer was ${correctAnswer}`);
       $('.info').css("color","red");
     }
     indexCounter = countCorrectAnswersAttemptedQuestions(methods, 'status');
@@ -168,7 +162,6 @@ function renderNextQuestion(){
     $('.submitButton').attr("disabled", false);
     $(".labelContainer input:radio[name = 'choice']:first").focus();
     $('.info').html("");
-    $('.info').attr('hidden', true);
     indexCounter = countCorrectAnswersAttemptedQuestions(methods, 'status');
     $('.status span').html(indexCounter + 1);
   });
@@ -227,3 +220,4 @@ function handleFocus(){
   });
 }       
 $(handleFocus);     
+ 
